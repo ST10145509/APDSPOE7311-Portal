@@ -1,0 +1,141 @@
+/* General form container styling */
+.signup-container, .login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px; /* Increased padding inside the container */
+    background-color: #f9f9f9;  /* Light grey background for a professional look */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease; /* Smooth transitions for hover or focus effects */
+  }
+  
+  /* Header styling */
+  h2 {
+    text-align: center;
+    color: #333;  /* Dark text for better readability */
+    margin-bottom: 20px;
+    font-size: 1.6em;
+  }
+  
+  /* Label styling */
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-size: 0.95em;
+  }
+  
+  /* Input fields styling */
+  input[type="text"], input[type="email"], input[type="password"] {
+    width: calc(100% - 20px); /* Added 20px padding inside the input field */
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.95em;
+    background-color: #f1f1f1;  /* Light background for input boxes */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  /* Input focus styling for a professional look */
+  input:focus {
+    border-color: #007BFF;  /* Blue border to indicate focus */
+    background-color: #fff;  /* White background when focused */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle shadow for focus */
+  }
+  
+  /* Button styling */
+  button {
+    width: 100%;
+    padding: 14px;  /* Slightly more padding for a solid button look */
+    background-color: #007BFF;  /* Banking blue color for primary action button */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;  /* Darker blue for hover effect */
+  }
+  
+  button[disabled] {
+    background-color: #cccccc;  /* Greyed-out button when form is invalid */
+    cursor: not-allowed;
+  }
+  
+  /* Error message styling */
+  .error {
+    color: #e74c3c;  /* Red color for error messages */
+    font-size: 0.85em;
+    margin-top: -8px;
+    margin-bottom: 10px;
+  }
+  
+  .success-message {
+    color: #28a745;  /* Green color for success messages */
+  }
+  
+  .error-message {
+    color: #e74c3c;  /* Red color for error messages */
+  }
+  
+  /* Link styling */
+  a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Small elements for errors */
+  small.error {
+    color: #e74c3c;  /* Error messages in red */
+    font-size: 0.85em;
+  }
+  
+  /* Adjust the spacing for the login link */
+  p {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  /* Adding responsiveness */
+  @media screen and (max-width: 500px) {
+    .signup-container, .login-container {
+      width: 90%;  /* For smaller screens, make the form take up more width */
+    }
+    button {
+      padding: 12px;  /* Adjust button padding for smaller screens */
+    }
+  }
+  
+  .back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto; /* Add this line */
+  }
+
+  .back-button:hover {
+    background-color: #5a6268;
+  }
+
+  .login-container, .signup-container {
+    position: relative;
+  }

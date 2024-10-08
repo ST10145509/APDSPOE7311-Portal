@@ -1,0 +1,41 @@
+<div class="customer-portal">
+  <h1>Welcome to Your Customer Portal</h1>
+  <p>Here you can manage your international payments and account details.</p>
+  
+  <button class="logout-button" (click)="logout()">Logout</button>
+  
+  <div class="portal-sections">
+    <div class="section">
+      <h2>Account Overview</h2>
+      <p>Current Balance: ${{ accountBalance.toFixed(2) }}</p>
+      <h3>Recent Transactions</h3>
+      <ul>
+        <li *ngFor="let transaction of recentTransactions">
+          {{ transaction.date }} - {{ transaction.description }}: ${{ transaction.amount.toFixed(2) }}
+        </li>
+      </ul>
+      <button (click)="showDevelopmentMessage()">View More</button>
+    </div>
+    
+    <div class="section">
+      <h2>Make a Payment</h2>
+      <p>Initiate a new international payment.</p>
+      <button (click)="showDevelopmentMessage()">Start Payment</button>
+    </div>
+    
+    <div class="section">
+      <h2>Payment History</h2>
+      <p>Review your past international payments.</p>
+      <button (click)="showDevelopmentMessage()">View History</button>
+    </div>
+    
+    <div class="section">
+      <h2>Account Settings</h2>
+      <p>Update your personal information and security settings.</p>
+      <button (click)="showDevelopmentMessage()">Manage Settings</button>
+    </div>
+  </div>
+  
+  <div *ngIf="isLoading" class="loading-spinner">Loading...</div>
+  <div *ngIf="error" class="error-message">{{ error }}</div>
+</div>

@@ -1,0 +1,44 @@
+<form [formGroup]="signupForm" (ngSubmit)="onSignup()">
+  <!-- Username Field -->
+  <div>
+    <label for="signup-username">Username</label>
+    <input id="signup-username" formControlName="username" type="text" placeholder="Enter your username" />
+    <small *ngIf="signupForm.get('username')?.invalid && signupForm.get('username')?.touched" class="error">
+      Username is required and must be alphanumeric.
+    </small>
+  </div>
+
+  <!-- Email Field -->
+  <div>
+    <label for="signup-email">Email</label>
+    <input id="signup-email" formControlName="email" type="email" placeholder="Enter your email" />
+    <small *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched" class="error">
+      Valid email is required.
+    </small>
+  </div>
+
+  <!-- Password Field -->
+  <div>
+    <label for="signup-password">Password</label>
+    <input id="signup-password" formControlName="password" type="password" placeholder="Enter your password">
+    <small *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched" class="error">
+      {{ getPasswordErrorMessage() }}
+    </small>
+  </div>
+
+  <!-- Confirm Password Field -->
+  <div>
+    <label for="signup-confirm-password">Confirm Password</label>
+    <input id="signup-confirm-password" formControlName="confirmPassword" type="password" placeholder="Confirm your password" />
+    <small *ngIf="signupForm.get('confirmPassword')?.invalid && signupForm.get('confirmPassword')?.touched" class="error">
+      Passwords must match.
+    </small>
+  </div>
+
+  <!-- Submit Button -->
+  <button type="submit" [disabled]="!signupForm.valid">Sign Up</button>
+</form>
+
+<p *ngIf="signupError" class="error">{{ signupError }}</p>
+
+<p>Already have an account? <a routerLink="/login">Login here</a></p>
