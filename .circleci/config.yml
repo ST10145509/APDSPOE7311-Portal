@@ -4,7 +4,7 @@ orbs:
   node: circleci/node@5.0.2
 
 jobs:
-  build:
+  build-and-test:
     docker:
       - image: cimg/node:18.19
     steps:
@@ -16,10 +16,12 @@ jobs:
           command: npm run build
       - run:
           name: Test
-          command: npm test -- --no-watch --no-progress
+          command: npm test -- --no-watch --no-progress --browsers=ChromeHeadless
+      - store_test_results:
+          path: test-results
 
 workflows:
   version: 2
-  build-and-test:
+  build-test-deploy:
     jobs:
-      - build
+      - build-and-test
