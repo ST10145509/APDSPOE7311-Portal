@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\CustomerPortalApp",
+    "\\CustomerPortalApp\\backend",
+    "\\CustomerPortalApp\\backend\\src",
+    "\\CustomerPortalApp\\backend\\src\\middleware",
+    "\\CustomerPortalApp\\backend\\src\\models",
+    "\\CustomerPortalApp\\frontend",
+    "\\CustomerPortalApp\\frontend\\src",
+    "\\CustomerPortalApp\\frontend\\src\\app",
+    "\\CustomerPortalApp\\frontend\\src\\app\\customer"
+  ],
+  "SelectedNode": "\\CustomerPortalApp\\frontend\\src\\app\\customer\\customer-portal.component.ts",
+  "PreviewInSolutionExplorer": false
+}
