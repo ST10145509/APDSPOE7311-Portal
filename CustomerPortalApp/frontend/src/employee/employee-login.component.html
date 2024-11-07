@@ -1,0 +1,27 @@
+<div class="employee-login-container">
+    <h1>Employee Sign In</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <label for="username">Username</label>
+      <input
+        id="username"
+        formControlName="username"
+        type="text"
+        placeholder="Enter your username"
+        required
+      />
+  
+      <label for="password">Password</label>
+      <input
+        id="password"
+        formControlName="password"
+        type="password"
+        placeholder="Enter your password"
+        required
+      />
+  
+      <button type="submit" [disabled]="!loginForm.valid">Sign In</button>
+    </form>
+  
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  </div>
+  
